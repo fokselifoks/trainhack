@@ -400,6 +400,7 @@ section.video-overlay {
   background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
+  padding: 40px;
   
   display: none;
   opacity: 0;
@@ -413,18 +414,26 @@ section.video-overlay {
   &.show {
     opacity: 1;
     
-    .video-wrapper {
+    .video-wrapper,
+    .close-overlay {
       transform: scale(1);
+    }
+  }
+  
+  .overlay-content {
+    &:hover .close-overlay {
+      opacity: 1;
+    }
+    
+    .close-overlay {
+      opacity: 0.25;
       
-      .close-overlay {
-        opacity: 1;
-      }
+      transition: opacity 0.2s ease, transform 0.4s ease;
     }
   }
   
   .video-wrapper {
     width: 100%;
-    max-width: 1000px;
     position: relative;
     border-radius: 10px;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.5);
@@ -451,17 +460,28 @@ section.video-overlay {
   }
 }
 
-.close-overlay {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: -25px;
-  right: -25px;
-  z-index: 10;
-  background: #fff;
-  border-radius: 25px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+.overlay-content {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
   
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  .close-overlay {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #fff;
+    background-image: url(../media/close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+  }
 }
