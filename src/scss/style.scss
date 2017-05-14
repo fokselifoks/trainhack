@@ -28,7 +28,6 @@ h2 {
 p {
   font-size: 15px;
   line-height: 26px;
-  font-size: 400;
   color: #666677;
 }
 
@@ -211,7 +210,7 @@ section.hero {
       p {
         width: 100%;
         max-width: 594px;
-        margin: 20px 0 25px;
+        margin: 20px 0 40px;
       }
       
       .latest-news p {
@@ -411,7 +410,7 @@ section.overlay {
   background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 50px;
   
   display: none;
   opacity: 0;
@@ -601,8 +600,291 @@ section.signup-overlay {
   Tablet styles
 ============================== */
 
-@media only screen and (max-width: 1079px) {
+@media only screen and (max-width: 1024px) {
   
+  h1 {
+    font-size: 35px;
+    line-height: 40px;
+    letter-spacing: 6px;
+  }
   
+  .wrapper {
+    max-width: 740px;
+    
+    &.padding {
+      padding: 0 20px;
+    }
+  }
+  
+  hr {
+    margin: 100px 0;
+  }
+  
+  section.hero {
+    padding: 100px 50px;
+    
+    article.back .video-container {
+      display: none;
+    }
+    
+    article.content .wrapper {
+      .badge {
+        width: 250px;
+        height: 250px;
+        margin: 0 0 40px;
+      }
+      
+      p {
+        margin: 10px 0 40px;
+      }
+      
+      hr {
+        margin: 50px 0;
+      }
+    }
+  }
+  
+  section.main {
+    padding: 0 30px;
+    
+    article.about {
+      margin: 100px 0 0;
+      
+      .text {
+        width: 100%;
+        order: 2;
+        padding: 0;
+        margin: 75px 0 0;
+        text-align: center;
+        
+        p {
+          margin: 20px 0 0;
+        }
+      }
+      
+      .image {
+        width: 100%;
+        order: 1;
+        padding: 0;
+      }
+    }
+    
+    article.brands {
+      h2 {
+        margin: 0 0 50px;
+      }
+      
+      ul.brand-list {
+        padding: 0 10px;
+        
+        li {
+          width: 33.333%;
+          padding: 0 10px;
+          margin: 20px 0 0;
+          
+          &:nth-child(-n+3) {
+            margin: 0;
+          }
+          
+          &:nth-child(4n) {
+            margin: 20px 0 0;
+          }
+          
+          .inner a {
+            &:hover {
+              box-shadow: none;
+              transform: translate3d(0px, 0px, 0px);
+            }
+            
+            &:active {
+              box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+              transform: translate3d(0px, -5px, 0px);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  footer {
+    margin: 100px 0 0;
+  }
+  
+}
+
+/* ==============================
+  Small tablet styles
+============================== */
+
+@media only screen and (max-width: 700px) {
+  
+  h1 {
+    font-size: 24px;
+    line-height: 42px;
+    letter-spacing: 4px;
+  }
+  
+  hr {
+    margin: 60px 0;
+  }
+  
+  section.hero {
+    padding: 60px 30px;
+    
+    article.content .wrapper {
+      
+      .button-wrapper {
+        max-width: 220px;
+        justify-content: center;
+        
+        button:first-child {
+          margin: 0 0 20px;
+        }
+      }
+    }
+  }
+  
+  section.main {
+    padding: 0 10px;
+    
+    article.about {
+      margin: 60px 0 0;
+      
+      .image img {
+        border-radius: 5px;
+      }
+    }
+    
+    article.brands {
+      h2 {
+        margin: 0 0 30px;
+      }
+      
+      ul.brand-list {
+        justify-content: center;
+        
+        li {
+          width: 50%;
+          max-width: 240px;
+          
+          &:nth-child(-n+2) {
+            margin: 0;
+          }
+          
+          &:nth-child(3) {
+            margin: 20px 0 0;
+          }
+        }
+      }
+    }
+  }
+  
+  footer {
+    margin: 60px 0 0;
+  }
+  
+  section.overlay {
+    padding: 30px;
+    
+    &.video-overlay .overlay-content {
+      .close-overlay {
+        opacity: 1;
+      }
+      
+      .video-wrapper article.video-player {
+        border-radius: 5px;
+      }
+    }    
+  }
+  
+  section.signup-overlay .overlay-content {
+    article.signup-form {
+      padding: 50px 30px 30px;
+      
+      p {
+        margin: 10px 0 35px;
+      }
+    }
+  }
+  
+}
+
+/* ==============================
+  Large mobile styles
+============================== */
+
+@media only screen and (max-width: 450px) {
+  
+  section.main article.brands ul.brand-list li {
+    width: 100%;
+    margin: 20px 0 0;
+    
+    &:first-child {
+      margin: 0;
+    }
+    
+    &:nth-child(2) {
+      margin: 20px 0 0;
+    }
+  }
+  
+}
+
+/* ==============================
+  Mobile styles
+============================== */
+
+@media only screen and (max-width: 400px) {
+  
+  hr {
+    margin: 50px 0;
+  }
+  
+  section.hero {
+    padding: 50px 20px;
+    
+    article.content .wrapper {
+      .badge {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+  
+  section.main {
+    padding: 0;
+  }
+
+  footer {
+    margin: 50px 0 0;
+  }
+  
+  section.overlay {
+    padding: 10px;
+    
+    .overlay-content .close-overlay {
+      right: 50%;
+      margin-right: -25px;
+      top: -60px;
+    }
+    
+    &.video-overlay .overlay-content .close-overlay {
+      opacity: 1;
+    }
+  }
+  
+  section.signup-overlay .overlay-content {
+    .close-overlay {
+      top: -25px;
+    }
+    
+    article.signup-form {
+      padding: 50px 20px 20px;
+      
+      p {
+        margin: 10px 0 25px;
+      }
+    }
+  }
   
 }

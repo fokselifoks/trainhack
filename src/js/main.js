@@ -1,5 +1,6 @@
 console.log('This website was designed and built by Sandelin Webbyrå.\n\nhttps://sandelinwebbyra.se');
 
+const mobile = (document.body.offsetWidth <= 1024);
 
 /* ==============================
   Hero background video
@@ -50,8 +51,10 @@ function onYouTubeIframeAPIReady () {
 }
 
 function showVideoOverlay () {
-  heroVideo.pause();
-  videoPlayer.playVideo();
+  if (!mobile) {
+    heroVideo.pause();
+    videoPlayer.playVideo();
+  }
   videoOverlay.classList.add('display');
   setTimeout(() => {
     videoOverlay.classList.add('show');
@@ -59,8 +62,10 @@ function showVideoOverlay () {
 }
 
 function hideVideoOverlay () {
-  heroVideo.play();
-  videoPlayer.pauseVideo();
+  if (!mobile) {
+    heroVideo.play();
+    videoPlayer.pauseVideo();
+  }
   videoOverlay.classList.remove('show');
   setTimeout(() => {
     videoOverlay.classList.remove('display');
