@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body {
+body, input {
   font-family: 'Work Sans', sans-serif;
 }
 
@@ -390,7 +390,7 @@ footer {
   }
 }
 
-section.video-overlay {
+section.overlay {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -414,10 +414,41 @@ section.video-overlay {
   &.show {
     opacity: 1;
     
-    .video-wrapper,
-    .close-overlay {
+    .overlay-content .close-overlay {
       transform: scale(1);
     }
+  }
+  
+  .overlay-content {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    
+    .close-overlay {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: -25px;
+      right: -25px;
+      z-index: 10;
+      cursor: pointer;
+      background-color: #fff;
+      background-image: url(../media/close.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 12px;
+      border-radius: 25px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      
+      transform: scale(1.2);
+      transition: transform 0.4s ease;
+    }
+  }
+}
+
+section.video-overlay {
+  &.show .video-wrapper {
+    transform: scale(1);
   }
   
   .overlay-content {
@@ -436,7 +467,7 @@ section.video-overlay {
     width: 100%;
     position: relative;
     border-radius: 10px;
-    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
     transform: scale(0.95);
     transition: transform 0.4s ease;
     
@@ -460,28 +491,95 @@ section.video-overlay {
   }
 }
 
-.overlay-content {
-  width: 100%;
-  max-width: 1000px;
-  position: relative;
+section.signup-overlay {
+  &.show .overlay-content article.signup-form {
+    transform: scale(1);
+  }
   
-  .close-overlay {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: -25px;
-    right: -25px;
-    z-index: 10;
-    cursor: pointer;
-    background-color: #fff;
-    background-image: url(../media/close.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 12px;
-    border-radius: 25px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  .overlay-content {
+    max-width: 700px;
     
-    transform: scale(1.2);
-    transition: transform 0.4s ease;
+    article.signup-form {
+      width: 100%;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+      padding: 60px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      transform: scale(0.9);
+      transition: transform 0.4s ease;
+      
+      p {
+        width: 100%;
+        max-width: 340px;
+        font-size: 13px;
+        line-height: 20px;
+        margin: 10px 0 20px;
+      }
+      
+      .input-wrapper {
+        width: 100%;
+        max-width: 460px;
+        position: relative;
+        
+        input {
+          width: 100%;
+          height: 50px;
+          background: none;
+          border-radius: 5px 0 0 5px;
+          border: none;
+          box-shadow: none;
+          font-size: 15px;
+          text-indent: 17px;
+          color: #2C2C30;
+          outline: none;
+          border: 1px solid #eee;
+          border-radius: 5px;
+          padding: 0 50px 0 0;
+          
+          transition: border-color 0.2s ease;
+          
+          &:focus {
+            border-color: #CACBDD;
+            
+            ~ button:before {
+              background: #CACBDD;
+            }
+          }
+        }
+        
+        button {
+          width: 48px;
+          height: 48px;
+          padding: 0;
+          border-radius: 0 5px 5px 0;
+          position: absolute;
+          top: 1px;
+          right: 1px;
+          background: none;
+          background-color: none;
+          background-image: url(../media/arrow.svg);
+          background-size: 7px;
+          background-repeat: no-repeat;
+          background-position: center;
+          
+          &:before {
+            content: '';
+            width: 1px;
+            height: 30px;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            background: #eee;
+            
+            transition: background 0.2s ease;
+          }
+        }
+      }
+    }
   }
 }

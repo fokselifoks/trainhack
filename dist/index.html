@@ -29,7 +29,7 @@
           
           <div class="button-wrapper">
             <button class="lined white" id="watch-video">Se filmen</button>
-            <button>Anmäl intresse</button>
+            <button id="sign-up">Anmäl intresse</button>
           </div>
           
           <hr>
@@ -111,14 +111,30 @@
       <p>Kontakta oss på: <a href="mailto:contact@46elks.com">contact@46elks.com</a></p>
     </footer>
     
-    <section class="video-overlay">
+    <section class="overlay video-overlay">
       <div class="overlay-content">
-        <div class="close-overlay" id="close-video-overlay"></div>
+        <div class="close-overlay" id="hide-video-overlay"></div>
         <div class="video-wrapper">
           <article class="video-player">
             <div id="video-placeholder"></div>
           </article>
         </div>
+      </div>
+    </section>
+    
+    <section class="overlay signup-overlay">
+      <div class="overlay-content">
+        <div class="close-overlay" id="hide-signup-overlay"></div>
+        <article class="signup-form">
+          <h2>Anmäl intresse</h2>
+          <p>Fyll i din epost för att få information om kommande Trainhack och andra liknande event.</p>
+          <div class="input-wrapper">
+            <form action="https://script.google.com/macros/s/AKfycbxkK6ZHQerZSgJkSvRBsfn-ge0KnSRnwguectelXzyUowaAoPM/exec" method="post">
+              <input type="email" placeholder="Din emailadress.." name="email" id="signup-email">
+              <button id="send-singup" type="submit"></button>
+            </form>
+          </div>
+        </article>
       </div>
     </section>
     

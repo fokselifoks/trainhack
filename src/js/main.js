@@ -70,7 +70,7 @@ function hideVideoOverlay () {
 function addVideoOverlayEvents () {
   document.getElementById('watch-video').addEventListener('click', showVideoOverlay);
   document.querySelector('section.video-overlay').addEventListener('click', hideVideoOverlay);
-  document.getElementById('close-video-overlay').addEventListener('click', (e) => {
+  document.getElementById('hide-video-overlay').addEventListener('click', (e) => {
     e.stopPropagation();
     hideVideoOverlay();
   });
@@ -78,3 +78,39 @@ function addVideoOverlayEvents () {
     e.stopPropagation();
   });
 }
+
+/* ==============================
+  Overlaying sign up form
+============================== */
+
+const signupOverlay = document.querySelector('section.signup-overlay');
+
+function showSignupOverlay () {
+  signupOverlay.classList.add('display');
+  setTimeout(() => {
+    signupOverlay.classList.add('show');
+  }, 20);
+}
+
+function hideSingupOverlay () {
+  signupOverlay.classList.remove('show');
+  setTimeout(() => {
+    signupOverlay.classList.remove('display');
+  }, 400);
+}
+
+document.getElementById('sign-up').addEventListener('click', showSignupOverlay);
+document.querySelector('section.signup-overlay').addEventListener('click', hideSingupOverlay);
+document.getElementById('hide-signup-overlay').addEventListener('click', (e) => {
+  e.stopPropagation();
+  hideSingupOverlay();
+});
+document.querySelector('section.signup-overlay .overlay-content').addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+
+document.getElementById('signup-email').addEventListener('keydown', (e) => {
+  if (e.keyCode === 13) {
+    document.getElementById('send-singup').click();
+  }
+});
