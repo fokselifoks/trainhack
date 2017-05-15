@@ -1,6 +1,9 @@
 console.log('This website was designed and built by Sandelin Webbyrå.\n\nhttps://sandelinwebbyra.se');
 
-const mobile = (document.body.offsetWidth <= 1024);
+let mobile = (document.body.offsetWidth <= 1024);
+window.addEventListener('resize', () => {
+  mobile = (document.body.offsetWidth <= 1024);
+})
 
 /* ==============================
   Hero background video
