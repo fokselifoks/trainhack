@@ -107,7 +107,10 @@ function hideSingupOverlay () {
   }, 400);
 }
 
-document.getElementById('sign-up').addEventListener('click', showSignupOverlay);
+if (document.getElementById('sign-up')) {
+  document.getElementById('sign-up').addEventListener('click', showSignupOverlay);
+}
+
 document.querySelector('section.signup-overlay').addEventListener('click', hideSingupOverlay);
 document.getElementById('hide-signup-overlay').addEventListener('click', (e) => {
   e.stopPropagation();
