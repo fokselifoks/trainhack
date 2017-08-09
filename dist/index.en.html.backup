@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Join us for a 2000km long train ride through the beautiful Swedish landscape
+    together with 47 other hackers and work on making public transport better.">
+
+    <title>Trainhack 2017 - Rolling out solutions for public transport - on rails.</title>
+
+    <link rel="icon" href="media/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600,700|Work+Sans:400,600,700">
+
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <section class="hero">
+      <article class="back">
+        <div class="gradient"></div>
+        <div class="video-container"></div>
+      </article>
+
+      <article class="content">
+        <div class="wrapper">
+
+          <div class="badge"></div>
+          <h1>Hackathon on rails!</h1>
+          <h2 style="margin-top:40px;">7'th to 9'th of September</h2>
+          <p>Join us for a 2000km train ride through the beautiful Swedish landscape together with 47 other hackers and work on making public transport better.</p>
+
+          <div class="button-wrapper">
+            <button class="lined white" id="watch-video">See the movie</button>
+            <!-- <button id="sign-up">Newsletter</button> -->
+            <button class="white" onclick="window.location.href='https://trainhack-2017.confetti.events/signup/'">Buy Ticket</button>
+          </div>
+
+          <hr>
+
+          <div class="latest-news">
+            <h2>Welcome</h2>
+            <p>
+                <b>If you have any questions, contact us on hello@trainhack.com <br> or call Martin at 46elks 0723-175800</b>
+               </p>
+          </div>
+
+        </div>
+      </article>
+    </section>
+
+    <section class="main">
+      <div class="wrapper padding">
+
+        <article class="about">
+          <div class="text">
+            <h2>About Trainhack</h2>
+            <p>The purpose of Trainhack is to create a unique, challenging, and fun hackevent
+              for developers, where the journey focuses on creating digital services that make travelling with public transport easier and a more positive experience.</p>
+          </div>
+          <div class="image">
+            <img src="media/hackers-2016.jpg" alt="The group of hackers from Trainhack 2016">
+            <div class="button-wrapper">
+              <a href="http://trainhack.se/2016" target="_blank">
+                <button class="shadow">Last year</button>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <hr>
+                <article class="about">
+                  <div class="text" style="justify-content: initial;">
+                    <h2>Event details</h2>
+
+                    <p>We start in Gothenburg at 18:00 and we end the trip in Uppsala around lunch on the 9th.
+                      The route will pass Luleå where we will make a stop for activities and food.</p>
+
+                    <h4>Beds</h4>
+                    <p>
+                      All hackers will have their own bed to sleep in, if you want - sleep the entire event.
+                      Hopefully not everyone will spend the entire time sleeping, but rather spending time on their projects.
+                    </p>
+
+                    <h4>Wifi onboard</h4>
+                    <p>There will be wifi onboard all the way, as well as local server for git repos m.m. this is supplied by <a href="http://www.icomera.com/">Icomera</a></p>
+
+                    <h4>Slack</h4>
+                    <p>All hackers will be invited to a Slack team,
+                      where you can find new teammates or exchange ideas.
+                      You may also work on a project by yourself.</p>
+
+                    <h4>Food and Drinks</h4>
+                    <p>
+                    There will be food and drinks for the parisipants all the
+                    way. Please remember to state any allergies when booking your ticket.
+                    </p>
+
+                  </div>
+          <div class="text" style="justify-content: initial;">
+            <h2 style="text-align:center">Timetable</h2>
+            <p>
+            <ul>
+              <li style="text-align:center"><i>Thursday 2017-09-07</i><br><br></li>
+              <li><b>18:00</b> - Checkin Göteborg C</li>
+              <li><b>18:30</b> - Departure Göteborg C</li>
+              <li><b>19:00</b> - Food and drinks are served</li>
+              <li><b>19:51</b> - Departure Sköcde C (Boarding possible)</li>
+              <li><b>22:40</b> - Departure Stockholm C (Boarding possible)</li>
+              <li style="text-align:center"><br><i>Friday 2017-09-08</i><br><br></li>
+              <li><b>07:30</b> - Breakfast on borad the train</li>
+              <li><b>11:11</b> - Arrival in Luleå C</li>
+              <li><b>11:45</b> - Presentation from LTU</li>
+              <li><b>12:30</b> - Lunch </li>
+              <li><b>13:30</b> - Continued hacking </li>
+              <li><b>17:31</b> - Departure Luleå C</li>
+              <li style="text-align:center"><br><i>Saturday 2017-09-09</i><br><br></li>
+              <li><b>05:30</b> - Arrival in Uppsala C</li>
+              <li><b>06:30</b> - Breakfast in Uppsala</li>
+              <li><b>09:00</b> - Presentation by the teams</li>
+              <li><b>11:30</b> - Award ceremony</li>
+              <li><b>11:45</b> - Trainhack 2017 ended</li>
+            </ul>
+            </p>
+          </div>
+        </article>
+            <hr>
+                    <article class="about">
+                      <div class="text" style="justify-content: initial;">
+
+            <h2>Public transit API's and open data</h2>
+            <p>
+              Thre is plenty of resources to make the development of your project possible.
+              Here is a list of APIs from Public transit companies and agencies.
+            </p>
+            <ul>
+              <li><a href="http://www.trafiklab.se">Trafiklab - Public transit API and data</a></li>
+              <li><a href="https://lastkajen.trafikverket.se">Map data from Trafikverket</a></li>
+              <li><a href="https://developer.vasttrafik.se/portal">Västtrafik's developer portal</a></li>
+              <li><a href="http://labs.skanetrafiken.se">Skånetrafiken's developer portal</a></li>
+            </ul>
+
+            <p> Other types of APIs and open data that may be usefull:</p>
+
+            <ul>
+              <li><a href="https://www.46elks.com">46elks - SMS, Calls & MMS-API.</a></li>
+              <li><a href="https://api.taxistockholm.se/doc/">Taxi Stockholm - Taxi booking API.</a></li>
+              <li><a href="https://oppnadata.se">Öppnadata - Consolidation point of open data.</a></li>
+              <li><a href="http://hackforsweden.se/sv/data">HackForSweden - List of open data.</a></li>
+              <li><a href="http://api.sr.se">Sveriges Radio - API with image, pods, etc..</a></li>
+              <li><a href="http://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=7369889&fileOId=7369895">Masterpaper about nighttrains.</a></li>
+            </ul>
+            <p>
+          </p>
+
+            <h2>IoT - Devices</h2>
+            <p>
+              All antendees get 250 SEK to buy IoT devices from
+              <a href="http://m.nu">m.nu</a>, this is very usefull for everone
+              who wants to build any IoT-solution and wants to present a protype.
+              Or prehaps your phone needs a new charger or a powerpack. Your order
+              will be delivered directly to your bed on the train.
+            </p>
+
+            <h2>SMS API</h2>
+            <p>
+              It may be usefull to be able so for example send messages to traverls,
+              to help you to get going you get 250 SEK to use with the
+              <a href="https://www.46elks.com">46elks</a> API.
+              You get two phonenumbers for one year as well as 100 SMS or
+              up tio 200 calls.
+            </p>
+
+            <h2>Departure trainhack 2017</h2>
+            <p>
+            <div style="margin-left: auto; margin-right: auto; min-width:250px; max-width:658px; width:90%">
+              <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:28.125% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BWMk1dMA1vJ/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ett inlägg delat av @46elks</a> <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-07-06T07:19:40+00:00">Jul 6, 2017 kl. 12:19 PDT</time></p></div></blockquote> <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+              </div>
+            </p>
+
+          </div>
+  <div class="text" style="justify-content: initial;">
+
+            <h2>Themes for projects</h2>
+            <p>
+              Since we will be onboard a nightrain during the event, themes will often connect to this.
+              All prizes and themes are not yet set, however here are some samples for inspiration:
+            </p>
+
+            <ul>
+              <li><h4>Offline</h4><p>Since nighttrains often lack propper 3G/4G reception, offline
+              solutions will often be useful. What would the best offline solution be?</p></li>
+              <li><h4>Virtual Reality</h4><p>The reality on a train may not allways be perfect,
+              why not have a private cinema in VR? SJ AB will be upgrading current nighttrain wagons,
+              would you like to show how great that could be?</p></li>
+              <li><h4>Internet of Things</h4><p>On the trains today the amount of tech close to the
+              travellers is very limited. Why not have a RFID tag on each seat to let the passengers
+              check in with their phones? Is it possible to detect free seats with simple IoT devices
+              at a low cost?</p></li>
+              <li><h4>Planning support</h4><p>Today whenever there is an issue on the railroad
+              it takes very long to redirect trains on tracks that are still open. How
+              can this process become faster? Perhaps a complete trainsystem simulator
+              that can show all the events that will occur when the timetable is changed.</p></li>
+              <li><h4>Entertainment</h4><p>How to pass the time when travelling? A team created a game during Trainhack 2016
+              that asked questions about the current position of the train. What would be a fun game, unique to play on a train?</p></li>
+              <li><h4>Sleep tight</h4><p>What can technology do to make it easier to sleep on a night train? Perhaps it´s
+                sound canceling headphones, whale music, a blindfold,
+               or is it to prevent the nighhtmare of not waking up at your station, that helps you sleep like a baby?</p></li>
+               <li>
+                 <h4>Travel options</h4>
+                 <p>Today all trips are presented by the information in the
+                  timetable. However it the fastest trip is fully booked
+                  pehaps a tip with longer traveltime would be an option.
+                </p>
+                <p>
+                 When traveling on nighttrains longer travel times may be better,
+                 one example it is better to sleep for 8 hours rather than sleeping
+                 6 and then change the train to save 1 hour of travel. How could
+                 one present the travel options in a better way?
+                 </p>
+               </li>
+               <li>
+                 <h4>Disruption management</h4>
+                 <p>In situations when traffic does not work properly, different
+                   buses, trains, taxis will take care of the passengers. Often
+                   there is no easy way to know where different vehicles are
+                   located or an easy way to contact them. You can give
+                   drivers access to an app / web service / SMS solution that
+                   makes it easier to keep track of the information.</p>
+               </li>
+               <li>
+                 <h4>More detailed travel / train information</h4>
+                 <p>Today, it can be hard to know where to stand on the platform
+                   when the train comes and to know when the train arrives.
+                   Where exactly does the wagon stop, which vehicle is coming,
+                   How many meters away is the train now? How can GPS information
+                   from the train be used to give travelers more accurate travel
+                   information? How do the train usually run, how do you report
+                   historical delay statistics for a particular route or
+                   departure so that you as a customer can reduce your
+                   risk of delays.</p>
+               </li>
+               <li>
+                 <h4>Efficient work for train companies</h4>
+                 <p>Solutions that allow ticket checks to be handled by the
+                   travelers themselves, automatic rebooking in case of traffic
+                   disruption, automatic refunds when the train is delyed,
+                   overview of booked seats etc, ticketless travel
+                   - travel with RFID
+                   cards, Aztek, QR, SMS, MMS, Barcode, Driving license,
+                   ID card, Passport, etc., report malfunctions in wagons
+                   such as cleaning or broken details. How would it be to
+                   book trips inside online callers or on facebook?</p>
+               </li>
+             </ul>
+            </ul>
+          </div>
+                </article>
+                <hr>
+      </div>
+      <div class="wrapper">
+
+        <article class="brands">
+          <h2>Organizers</h2>
+          <ul class="brand-list">
+            <li>
+              <div class="inner">
+                <a href="https://www.46elks.com/" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/46elks.png" alt="46elk's logotype">
+                  </div>
+                  <p>46elks</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="inner">
+                <a href="https://www.sj.se/" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/sj.png" alt="SJ AB's logotype">
+                  </div>
+                  <p>SJ AB</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="inner">
+                <a href="https://www.etraveli.com/" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/etraveli.png" alt="eTRAVELi's logotype">
+                  </div>
+                  <p>eTRAVELi</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="inner">
+                <a href="https://www.trafiklab.se/" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/trafiklab.png" alt="Trafiklab's logotype">
+                  </div>
+                  <p>Trafiklab</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="inner">
+                <a href="https://www.oxyfi.se/" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/oxify.png" alt="Oxyfi's logotype">
+                  </div>
+                  <p>Oxyfi</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="inner">
+                <a href="https://www.railit.se/" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/railit.png" alt="Railit's logotype">
+                  </div>
+                  <p>Railit Tracker AB</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="inner">
+                <a href="https://www.microsoft.com/" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/microsoft.svg" alt="Microsoft's logotype">
+                  </div>
+                  <p>Microsoft</p>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <hr>
+        <article class="brands">
+          <h2>Sponsors</h2>
+          <ul class="brand-list">
+            <li>
+              <div class="inner">
+                <a href="https://www.icomera.com/" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/icomera.png" alt="Icomera's logotype">
+                  </div>
+                  <p>Icomera</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="inner">
+                <a href="https://www.m.nu" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/mnu.png" alt="m.nu's logotype">
+                  </div>
+                  <p>m.nu Homeautomation</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="inner">
+                <a href="https://www.vasttrafik.se/" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/vasttrafik.svg" alt="Västtrafiks's logotype">
+                  </div>
+                  <p>Västtrafik</p>
+                </a>
+              </div>
+            </li>
+            <!--<li>
+              <div class="inner">
+                <a href="http://www.blataget.com/" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/blåtåget.png" alt="BlåTåget's logotype">
+                  </div>
+                  <p>Blå Tåget</p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="inner">
+                <a href="http://www.linkon.se/" target="_blank">
+                  <div class="logo">
+                    <img src="media/brands/linkon.png" alt="Linkon's logotype">
+                  </div>
+                  <p>Linkon</p>
+                </a>
+              </div>
+            </li>-->
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>Contact us at: <a href="mailto:hello@trainhack.se">hello@trainhack.se</a> or <a id="sign-up">signup for the newsletter</a> for more information.</p>
+    </footer>
+
+    <section class="overlay video-overlay">
+      <div class="overlay-content">
+        <div class="close-overlay" id="hide-video-overlay"></div>
+        <div class="video-wrapper">
+          <article class="video-player">
+            <div id="video-placeholder"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="overlay signup-overlay">
+      <div class="overlay-content">
+        <div class="close-overlay" id="hide-signup-overlay"></div>
+        <article class="signup-form">
+          <h2>I'm interested!</h2>
+          <p>Enter your email to receive information about the next Trainhack and similar events.</p>
+          <div class="input-wrapper">
+            <form action="https://script.google.com/macros/s/AKfycbxkK6ZHQerZSgJkSvRBsfn-ge0KnSRnwguectelXzyUowaAoPM/exec" method="post">
+              <input type="email" placeholder="Your email address.." name="email" id="signup-email">
+              <button id="send-singup" type="submit"></button>
+            </form>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

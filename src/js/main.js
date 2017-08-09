@@ -5,9 +5,11 @@ window.addEventListener('resize', () => {
   mobile = (document.body.offsetWidth <= 1024);
 })
 
-/* ==============================
-  Hero background video
-============================== */
+/*
+  ==============================
+    Hero background video
+  ==============================
+*/
 
 function buildBackgroundVideo () {
   const container = document.querySelector('.video-container');
@@ -27,15 +29,17 @@ function buildBackgroundVideo () {
     document.querySelector('section.hero').classList.add('play');
     video.play();
   });
-  
+
   return video;
 }
 const heroVideo = buildBackgroundVideo();
 
 
-/* ==============================
-  Overlaying video player
-============================== */
+/*
+  ==============================
+    Overlaying video player
+  ==============================
+*/
 
 const script = document.createElement('script');
 script.src = 'https://www.youtube.com/iframe_api';
@@ -87,9 +91,11 @@ function addVideoOverlayEvents () {
   });
 }
 
-/* ==============================
-  Overlaying sign up form
-============================== */
+/*
+  ==============================
+    Overlaying sign up form
+  ==============================
+*/
 
 const signupOverlay = document.querySelector('section.signup-overlay');
 
@@ -125,3 +131,96 @@ document.getElementById('signup-email').addEventListener('keydown', (e) => {
     document.getElementById('send-singup').click();
   }
 });
+
+/*
+  ==============================
+    Time table slider
+  ==============================
+*/
+
+const timeTableContainer = document.querySelector('.time-table');
+const next = document.getElementById('next');
+const prev = document.getElementById('prev');
+
+const slider = new Swiper(timeTableContainer, {
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  observeParents: true,
+  onSlideChangeStart: (swiper) => {
+    const index = swiper.activeIndex;
+    const prevHas = prev.classList.contains('disable');
+    const nextHas = next.classList.contains('disable');
+    if (index > 0 && prevHas) prev.classList.remove('disable');
+    if (index === 0 && !prevHas) prev.classList.add('disable');
+    if (index < (swiper.slides.length - 1) && nextHas) next.classList.remove('disable');
+    if (index === (swiper.slides.length - 1) && !nextHas) next.classList.add('disable');
+  }
+});
+
+next.addEventListener('click', () => {
+  slider.slideNext();
+});
+
+prev.addEventListener('click', () => {
+  slider.slidePrev();
+});
+
+/*
+  ==============================
+    Event subjects
+  ==============================
+*/
+
+let subjectOverlayMoving = false;
+let subjectOverlayHidden = true;
+const subjectOverlay = document.querySelector('.subject-overlay');
+const subjects = document.querySelectorAll('ul.links.subjects li');
+for (let i = 0; i < subjects.length; i++) {
+  subjects[i].addEventListener('click', subjectClick);
+}
+
+subjectOverlay.querySelector('.close').addEventListener('click', () => {
+  toggleSubjectOverlay();
+});
+
+function subjectClick () {
+  const title = this.querySelector('p').innerHTML;
+  const text = this.querySelector('p.info').innerHTML;
+
+  subjectOverlay.querySelector('h3').innerText = title;
+  subjectOverlay.querySelector('p').innerHTML = text;
+  toggleSubjectOverlay();
+}
+
+function toggleSubjectOverlay () {
+  if (subjectOverlayMoving) return;
+
+  subjectOverlayMoving = true;
+  if (subjectOverlayHidden) {
+    subjectOverlay.classList.add('display');
+    setTimeout(() => {
+      subjectOverlay.classList.add('show');
+
+      if (window.innerWidth <= 568) {
+        const bodyRect = document.body.getBoundingClientRect();
+        const elemRect = subjectOverlay.querySelector('.subject-info').getBoundingClientRect();
+        const offset = elemRect.top - bodyRect.top - 50;
+        window.scrollTo(0, offset);
+      }
+
+      setTimeout(() => {
+        subjectOverlayMoving = false;
+      }, 300);
+    }, 20);
+  } else {
+    subjectOverlay.classList.remove('show');
+    setTimeout(() => {
+      subjectOverlay.classList.remove('display');
+      setTimeout(() => {
+        subjectOverlayMoving = false;
+      }, 20);
+    }, 300);
+  }
+
+  subjectOverlayHidden = !subjectOverlayHidden;
+}

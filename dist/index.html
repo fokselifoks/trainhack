@@ -2,17 +2,20 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="Följ med på en tågresa genom 2000km av Sveriges vackra landskap tillsammans med 47 andra hackare och förändra kollektivtrafiken till det bättre.">
 
     <title>Trainhack 2017 - Banar väg för nya lösningar inom kollektivtrafiken.</title>
 
     <link rel="icon" href="media/favicon.png" type="image/png">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600,700|Work+Sans:400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600,700|Work+Sans:400,500,600,700">
 
     <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/swiper.min.js"></script>
   </head>
   <body>
 
@@ -27,7 +30,7 @@
 
           <div class="badge"></div>
           <h1>Hackathon on rails!</h1>
-          <h2 style="margin-top:40px;">7:e till 9:e September</h2>
+          <h2 style="margin-top:40px;">7<span>:e</span> till 9<span>:e</span> September</h2>
           <p>Följ med på en tågresa genom 2000km av Sveriges vackra landskap tillsammans med 47 andra hackare och förändra kollektivtrafiken till det bättre.</p>
 
           <div class="button-wrapper">
@@ -41,7 +44,7 @@
           <div class="latest-news">
             <h2>Välkomna</h2>
             <p>
-               <b>Vid frågor maila hello@trainhack.com eller ring Martin på 46Elks 0723-175800</b>
+              <b>Vid frågor maila hello@trainhack.com eller ring Martin på 46Elks 0723-175800</b>
             </p>
           </div>
 
@@ -50,368 +53,515 @@
     </section>
 
     <section class="main">
-      <div class="wrapper padding">
+      <div class="padding-container">
+        <div class="wrapper padding">
 
-        <article class="about">
-          <div class="text">
-            <h2>Om Trainhack</h2>
-            <p>Syftet med Trainhack är att skapa ett för Sverige unikt,
-              utmanande och roligt hackevent för utvecklare och att det ska bli
-              en resa som fokuserar på att skapa digitala tjänster som
-              underlättar och skapar en mer positiv upplevelse av
-              kollektivtrafiken i hela Sverige.</p>
-          </div>
-          <div class="image">
-            <img src="media/hackers-2016.jpg" alt="The group of hackers from Trainhack 2016">
-            <div class="button-wrapper">
-              <a href="http://trainhack.se/2016" target="_blank">
-                <button class="shadow">Förra årets hack</button>
-              </a>
+          <article class="about">
+            <div class="text">
+              <h2>Om Trainhack</h2>
+              <p>
+                Syftet med Trainhack är att skapa ett för Sverige unikt,
+                utmanande och roligt hackevent för utvecklare och att det ska bli
+                en resa som fokuserar på att skapa digitala tjänster som
+                underlättar och skapar en mer positiv upplevelse av
+                kollektivtrafiken i hela Sverige.
+              </p>
             </div>
-          </div>
-        </article>
+            <div class="image">
+              <img src="media/hackers-2016.jpg" alt="The group of hackers from Trainhack 2016">
+              <div class="button-wrapper">
+                <a href="http://trainhack.se/2016" target="_blank">
+                  <button class="shadow">Förra årets hack</button>
+                </a>
+              </div>
+            </div>
+          </article>
 
-        <hr>
-
-                <article class="about">
-                  <div class="text" style="justify-content: initial;">
-                    <h2>Händer på eventet</h2>
-
-                    <p>Vi börjar 18:00 i Göteborg och avslutar i Uppsala den
-                      9:e vid lunch. Rutten kommer gå via Luleå där vi gör ett
-                      stopp för aktiviteter och mat.</p>
-
-                    <h4>Logi</h4>
-                    <p>
-                      Alla deltagare får var sin säng att sova i, det går att
-                      sova sig igenom hela eventet om man så vill.
-                      Förhoppningsvis finns det några som orkar vara vakna lite
-                      och jobba med sina projekt också.
-                    </p>
-
-                    <h4>Wifi ombord</h4>
-                    <p>Det kommer att finnas WiFi ombord hela vägen samt lokal
-                      server för git repos m.m. allt detta tillhandahålls av
-                      <a href="http://www.icomera.com/">Icomera</a> </p>
-
-                    <h4>Slack</h4>
-                    <p>Alla deltagare kommar att bjudas in till en Slack,
-                      där de som inte redan har ett lag kan hitta lagkamrater.
-                      Det går också bra att jobba med ett eget projekt.</p>
-
-                    <h4>Mat och Dryck</h4>
-                    <p>Under hela resan så kommer det att bjudas på mat och
-                    dryck. Kom ihåg att berätta om eventuella allergier etc
-                    när du bokar din biljett.</p>
-
-                  </div>
-          <div class="text" style="justify-content: initial;">
-            <h2 style="text-align:center">Tidtabell</h2>
-            <p>
-            <ul>
-              <li style="text-align:center"><i>Torsdagen den 7:e september</i><br><br></li>
-              <li><b>18:00</b> - Incheckning Göteborg C</li>
-              <li><b>18:30</b> - Avgång Göteborg C</li>
-              <li><b>19:00</b> - Mat och dryck serveras ombord på tåget</li>
-              <li><b>19:51</b> - Avgång Skövde C (påstigning möjlig)</li>
-              <li><b>22:40</b> - Avgång Stockholm C (påstigning möjlig)</li>
-              <li style="text-align:center"><br><i>Fredagen den 8:e september</i><br><br></li>
-              <li><b>07:30</b> - Fukost ombord på tåget</li>
-              <li><b>11:11</b> - Ankomst till Luleå C</li>
-              <li><b>11:45</b> - Presentation från Luleå Tekniska Universitet, LTU</li>
-              <li><b>12:30</b> - Lunch </li>
-              <li><b>13:30</b> - Fortsatt hackande</li>
-              <li><b>17:31</b> - Avgång från Luleå C</li>
-              <li style="text-align:center"><br><i>Lördagen den 9:e september</i><br><br></li>
-              <li><b>05:30</b> - Ankomst till Uppsala C</li>
-              <li><b>06:30</b> - Frukost</li>
-              <li><b>09:00</b> - Presentationer från lagen</li>
-              <li><b>11:30</b> - Prisutdelning och avslutning</li>
-              <li><b>11:45</b> - Trainhack 2017 avslutas för detta året</li>
-            </ul>
-            </p>
-
-          </div>
-        </article>
           <hr>
 
-                  <article class="about" style="margin-top: 0px">
-                    <div class="text" style="justify-content: initial;">
-                      <h2>Kollektivtrafik API:er och öppna data</h2>
-                      <p>
-                        Det finns en massa bra resurser att tillgå som gör
-                        utvecklingen möjlig. Här är en lista på API:er som
-                        kollektivtrafiksföretagen tillhandahåller.
-                      </p>
-                      <ul style="list-style-type: circle; margin-left: 40px;">
-                        <li style="list-style-type: circle;"><a href="http://www.trafiklab.se">Trafiklab - Kollektivtrafik APIer och data</a></li>
-                        <li style="list-style-type: circle;"><a href="https://lastkajen.trafikverket.se">Kartor m.m.från Trafikverket</a></li>
-                        <li style="list-style-type: circle;"><a href="https://developer.vasttrafik.se/portal">Västtrafiks utvecklar-portal.</a></li>
-                        <li style="list-style-type: circle;"><a href="http://labs.skanetrafiken.se">Skånetrafikens utvecklar-portal.</a></li>
-                      </ul>
+          <article>
 
-                      <p> Andra typer av API:er och öppna data som kan vara av värde:</p>
-                      <ul style="list-style-type: circle; margin-left: 40px;">
-                        <li style="list-style-type: circle;"><a href="https://www.46elks.com">46elks - SMS, Samtal & MMS-API.</a></li>
-                        <li style="list-style-type: circle;"><a href="https://api.taxistockholm.se/doc/">Taxi Stockholm - Boknings API.</a></li>
-                        <li style="list-style-type: circle;"><a href="https://oppnadata.se">Öppnadata - Samlings plats för öppna data.</a></li>
-                        <li style="list-style-type: circle;"><a href="http://hackforsweden.se/sv/data">HackForSweden - Lista med öppna data.</a></li>
-                        <li style="list-style-type: circle;"><a href="http://api.sr.se">Sveriges Radio - API med bilder, pods, m.m.</a></li>
-                        <li style="list-style-type: circle;"><a href="http://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=7369889&fileOId=7369895">Masteruppsatts om nattåg.</a></li>
-                      </ul>
-                      <p>
-                    </p>
+            <div class="article-head">
+              <h2>Allt om eventet</h2>
+              <p>Vi börjar 18:00 i Göteborg och avslutar i Uppsala den 9:e vid lunch. Rutten kommer gå via Luleå där vi gör ett stopp för aktiviteter och mat.</p>
+            </div>
 
-                      <h2>IoT - Prylar</h2>
-                      <p>
-                        Alla deltagare får 250 SEK att handla för på
-                        <a href="http://m.nu">m.nu</a>, detta passar väldigt bra
-                        för all deltagare som vill bygga någon typ av IoT-lösning
-                        och vill presentera en prototyp. Eller kanske behöver
-                        din telefon en ny laddare, eller powerpack? Allt du beställer
-                        kommer att levereras till din säng ombord på tåget.
-                      </p>
+            <ul class="content-sections">
+              <li>
+                <h3>Logi</h3>
+                <p>Vi börjar 18:00 i Göteborg och avslutar i Uppsala den 9:e vid lunch. Rutten kommer gå via Luleå där vi gör ett stopp för aktiviteter och mat.</p>
+              </li>
 
-                      <h2>SMS API</h2>
-                      <p>
-                        Det kan i mågga fall vara praktiskt att kunna meddela
-                        resenärer information via SMS, därför får alla deltagare
-                        250 SEK att använda i
-                        <a href="https://www.46elks.com">46elks</a> API.
-                        Det innebär 2 telefonummer ett år och 100 SMS eller
-                        upp till 200 telefonsamtal.
-                      </p>
+              <li>
+                <h3>Wifi ombord</h3>
+                <p>Det kommer att finnas WiFi ombord hela vägen samt lokal server för git repos m.m. allt detta tillhandahålls av <a href="http://www.icomera.com/" target="_blank">Icomera</a>.</p>
+              </li>
 
-                      <h2>Avgång trainhack 2017</h2>
-                      <p>
-                      <div style="margin-left: auto; margin-right: auto; min-width:250px; max-width:658px; width:90%;">
-<blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:28.125% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BWMk1dMA1vJ/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ett inlägg delat av @46elks</a> <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-07-06T07:19:40+00:00">Jul 6, 2017 kl. 12:19 PDT</time></p></div></blockquote> <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-                      </div>
-                      </p>
+              <li>
+                <h3>Slack</h3>
+                <p>Alla deltagare kommar att bjudas in till en Slack, där de som inte redan har ett lag kan hitta lagkamrater. Det går också bra att jobba med ett eget projekt.</p>
+              </li>
 
-                    </div>
-                    <div class="text" style="justify-content: initial;">
-                      <h2>Teman för projekt</h2>
-                      <p>
-                          Eftersom vi kommer vara ombord på nattåg under årets event så kommer många av eventens teman vara knutna till just nattåg.
-                          Vinster och teman kommer inte vara bindande, du har full frihet att hitta andra lösningar som du brinner för.
-                          Här finner du inspiration:
-                      </p>
+              <li>
+                <h3>Mat och dryck</h3>
+                <p>Under hela resan så kommer det att bjudas på mat och dryck. Kom ihåg att berätta om eventuella kostavvikelser och eller allergier när du bokar din biljett.</p>
+              </li>
 
-                      <ul>
-                        <li>
-                          <h4>Offline</h4>
-                          <p>Eftersom nattåg ofta inte har så bra mottagning så är det bra att göra saker som även funkar offline.
-                            Vi ser fram emot att se en riktigt snygg offlinelösning!.</p>
-                        </li>
-                        <li>
-                          <h4>Virtual Reality</h4>
-                          <p>Verkligheten på ett tåg kan vara svår att få perfekt,
-                            så varför inte ha en privat bio ombord när du ligger i din säng till exempel?
-                            SJ kommer att renovera sina nattåg under de kommande åren.
-                            Vill du visa hur häftigt det skulle kunna vara?</p>
-                        </li>
-                        <li>
-                          <h4>Internet of Things</h4>
-                          <p>Ombord på dagens tåg finns väldigt lite resenärsnära teknik.
-                            Varför inte sätta en RFID tag på varje plats och låta passagerarna checka in där med sin telefon?</p>
-                        </li>
-                        <li>
-                          <h4>Planeringsstöd</h4>
-                          <p>Idag tar det lång tid för tågföretagen att anpassa sig till när något händer på spåret.
-                            Det finns inget system som automatiskt kan planera om tidtabeller efter rådande situation.
-                            Kanske är det dags att skapa en tågsimulator som simulerar hela svenska järnvägsnätet,
-                            så att konsekvenserna av en ny tidtabell blir kända direkt?
-                            Ett system för att övervaka trafiken för att tidigt indikera när åtgärder omledningar etcetera behövs låter som en fin idé!</p>
-                        </li>
-                        <li>
-                          <h4>Underhållning</h4>
-                          <p>Hur kan man få tiden att gå fort när man reser?
-                            Under Trainhack 2016 skapades ett spel som ställde frågor baserat på var man befinner sig med hjälp av GPS-positionen.
-                            Spännande!</p>
-                        </li>
-                        <li>
-                          <h4>God sömn</h4>
-                          <p>Vad kan tekniken göra för att göra det lättare att sova ombord på
-                          nattåg? Kanske är det brusreducerande hörlurar, valmusik eller
-                          ögonbindel som är grejen, eller är det rädslan för att inte
-                          vakna när man ska gå av som stör?</p>
-                        </li>
-                        <li>
-                          <h4>Alterntiva resor</h4>
-                          <p>I dag presenteras resor utifrån tidtabellen och de snabbaste resorna presenteras först.
-                            Om den snabbaste resan är fullbokad visas inga alternativa lösningar för resenären.
-                            När man bokar nattåg presenteras alternativ med byte på natten då det ger kortare restid,
-                            men att sova 8 timmar på samma tåg och komma fram lite senare kan ju vara mycket bättre.
-                            Hur skulle man kunna presentera olika alternativ på ett bra sätt?
-                          </p>
-                        </li>
-                        <li>
-                          <h4>Störningshantering</h4>
-                          <p>I situationer när trafiken inte fungerar som den ska kan olika bussar,
-                            tåg och taxi ta hand om resenärerna.
-                            Ofta finns det ingen översikt över var olika fordon befinner sig eller något enkelt sätt att kontakta dem.
-                            Kan man ge förarna tillgång till en app- webb- eller SMSlösning som gör det lättare att hålla koll på informationen?
-                          </p>
-                        </li>
-                        <li>
-                          <h4>Mer detaljerad rese- och tåginfomration</h4>
-                          <p>Idag kan det vara svårt att vet var på perrongen man ska stå när tåget kommer och veta när tåget kommer.
-                            Var exakt stannar vagnen? Hur många meter bort är tåget? Hur kan GPS-information från tågen användas för att ge resenärerna noggrannare reseinformation?
-                          </p>
-                          <p>Brukar tåget vara sent? Hur presenterar man historisk förseningsstatistik för en viss sträcka eller avgång för att en som kund ska kunna minska risken för förseningar?</p>
-                        </li>
-                        <li>
-                          <h4>Effektivare verksamhet för tågföretag</h4>
-                          <p>Vi är nyfikna på lösningar som gör att biljettkontrollen kan hanteras av resenärerna själva. Automatisk ombokning vid trafikstörning, automatisk återbetalning vid försening, översikt över bokade platser med mera.
-                          </p>
-                          <p>
-                            Biljettlöst resande – resa med valfritt RFID kort,
-                            Aztek, QR, SMS, MMS, Streckkod, Körkort, ID kort, Pass,
-                            och så vidare.
-                            Självanmälda felaktigheter i vagnar så som städning eller trasiga detaljer.
-                            Hur skulle det funka att boka resor inne i onlinekalendrar eller på Facebook?</p>
-                        </li>
-                      </ul>
-                    </div>
-                </article>
-                <hr>
+              <li>
+                <h3>IoT - Prylar</h3>
+                <p>Alla deltagare får 250 SEK att handla för på <a href="http://m.nu" target="_blank">m.nu</a>, detta passar väldigt bra för all deltagare som vill bygga någon typ av IoT-lösning och vill presentera en prototyp. Eller kanske behöver din telefon en ny laddare, eller powerpack? Allt du beställer kommer att levereras till din säng ombord på tåget.</p>
+              </li>
+
+              <li>
+                <h3>SMS API</h3>
+                <p>Det kan i mågga fall vara praktiskt att kunna meddela resenärer information via SMS, därför får alla deltagare 250 SEK att använda i <a href="https://www.46elks.com" target="_blank">46elks</a> API. Det innebär 2 telefonummer ett år och 100 SMS eller upp till 200 telefonsamtal.</p>
+              </li>
+            </ul>
+
+          </article>
+
+          <hr>
+
+        </div>
       </div>
 
-      <div class="wrapper">
+      <article class="time">
+        <div class="article-head">
+          <h2>Tidtabell</h2>
+          <div class="control disable" id="prev"></div>
+          <div class="control" id="next"></div>
+        </div>
 
-        <article class="brands">
-          <h2>Arrangörer</h2>
-          <ul class="brand-list">
+        <div class="swiper-container time-table">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <h3>Torsdag <span>(7/9)</span></h3>
+              <ul class="events">
+                <li>
+                  <p>Inceckning Göteborg C</p>
+                  <p class="time">18:00</p>
+                </li>
+
+                <li>
+                  <p>Avgång Göteborg C</p>
+                  <p class="time">18:30</p>
+                </li>
+
+                <li>
+                  <p>Mat och dryck serveras ombord</p>
+                  <p class="time">19:00</p>
+                </li>
+
+                <li>
+                  <p>Avgång Skövde C (ev. påstigning)</p>
+                  <p class="time">19:51</p>
+                </li>
+
+                <li>
+                  <p>Avgång Stockholm C (ev. påstigning)</p>
+                  <p class="time">22:40</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="swiper-slide">
+              <h3>Fredag <span>(8/9)</span></h3>
+              <ul class="events">
+                <li>
+                  <p>Frukost ombord</p>
+                  <p class="time">07:30</p>
+                </li>
+
+                <li>
+                  <p>Ankomst till Luleå C</p>
+                  <p class="time">11:11</p>
+                </li>
+
+                <li>
+                  <p>Presentation från Luleå Tekniska Universitet, LTU</p>
+                  <p class="time">11:45</p>
+                </li>
+
+                <li>
+                  <p>Lunch</p>
+                  <p class="time">12:30</p>
+                </li>
+
+                <li>
+                  <p>Fortsatt hackande</p>
+                  <p class="time">13:30</p>
+                </li>
+
+                <li>
+                  <p>Avgång från Luleå C</p>
+                  <p class="time">17:31</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="swiper-slide">
+              <h3>Lördag <span>(9/9)</span></h3>
+              <ul class="events">
+                <li>
+                  <p>Ankomst till Uppsala C</p>
+                  <p class="time">05:30</p>
+                </li>
+
+                <li>
+                  <p>Frukost i Uppsala</p>
+                  <p class="time">06:30</p>
+                </li>
+
+                <li>
+                  <p>Presentationer från lagen</p>
+                  <p class="time">09:00</p>
+                </li>
+
+                <li>
+                  <p>Prisutdelning och avslutning</p>
+                  <p class="time">11:30</p>
+                </li>
+
+                <li>
+                  <p>Trainhack 2017 avslutas för året.</p>
+                  <p class="time">11:45</p>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <hr>
+
+      <article class="adaptive">
+
+        <div class="subject-overlay">
+          <div class="modal-container">
+            <div class="close"></div>
+            <div class="subject-info">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="article-head">
+            <h2>Teman för projekt</h2>
+            <p>Eftersom vi kommer vara ombord på nattåg under årets event så kommer många av eventens teman vara knutna till just nattåg. Vinster och teman kommer inte vara bindande, du har full frihet att hitta andra lösningar som du brinner för. Här finner du inspiration:</p>
+          </div>
+
+          <ul class="links subjects">
             <li>
-              <div class="inner">
-                <a href="https://www.46elks.com/" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/46elks.png" alt="46elk's logotype">
-                  </div>
-                  <p>46elks</p>
-                </a>
+              <div>
+                <p>Offline</p>
+                <p class="info">Eftersom nattåg ofta inte har så bra mottagning så är det bra att göra saker som även funkar offline. Vi ser fram emot att se en riktigt snygg offlinelösning!</p>
               </div>
             </li>
+
             <li>
-              <div class="inner">
-                <a href="https://www.sj.se/" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/sj.png" alt="SJ AB's logotype">
-                  </div>
-                  <p>SJ AB</p>
-                </a>
+              <div>
+                <p>Virtual Reality</p>
+                <p class="info">Verkligheten på ett tåg kan vara svår att få perfekt, så varför inte ha en privat bio ombord när du ligger i din säng till exempel? SJ kommer att renovera sina nattåg under de kommande åren. Vill du visa hur häftigt det skulle kunna vara?</p>
               </div>
             </li>
+
             <li>
-              <div class="inner">
-                <a href="https://www.etraveli.com/" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/etraveli.png" alt="eTRAVELi's logotype">
-                  </div>
-                  <p>eTRAVELi</p>
-                </a>
+              <div>
+                <p>Internet of Things</p>
+                <p class="info">Ombord på dagens tåg finns väldigt lite resenärsnära teknik. Varför inte sätta en RFID tag på varje plats och låta passagerarna checka in där med sin telefon?</p>
               </div>
             </li>
+
             <li>
-              <div class="inner">
-                <a href="https://www.trafiklab.se/" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/trafiklab.png" alt="Trafiklab's logotype">
-                  </div>
-                  <p>Trafiklab</p>
-                </a>
+              <div>
+                <p>Planeringsstöd</p>
+                <p class="info">Idag tar det lång tid för tågföretagen att anpassa sig till när något händer på spåret. Det finns inget system som automatiskt kan planera om tidtabeller efter rådande situation. Kanske är det dags att skapa en tågsimulator som simulerar hela svenska järnvägsnätet, så att konsekvenserna av en ny tidtabell blir kända direkt? Ett system för att övervaka trafiken för att tidigt indikera när åtgärder omledningar etcetera behövs låter som en fin idé!</p>
               </div>
             </li>
+
             <li>
-              <div class="inner">
-                <a href="https://www.oxyfi.se/" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/oxify.png" alt="Oxyfi's logotype">
-                  </div>
-                  <p>Oxyfi</p>
-                </a>
+              <div>
+                <p>Underhållning</p>
+                <p class="info">Hur kan man få tiden att gå fort när man reser? Under Trainhack 2016 skapades ett spel som ställde frågor baserat på var man befinner sig med hjälp av GPS-positionen. Spännande!</p>
               </div>
             </li>
+
             <li>
-              <div class="inner">
-                <a href="https://www.railit.se/" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/railit.png" alt="Railit's logotype">
-                  </div>
-                  <p>Railit Tracker AB</p>
-                </a>
+              <div>
+                <p>God sömn</p>
+                <p class="info">Vad kan tekniken göra för att göra det lättare att sova ombord på nattåg? Kanske är det brusreducerande hörlurar, valmusik eller ögonbindel som är grejen, eller är det rädslan för att inte vakna när man ska gå av som stör?</p>
               </div>
             </li>
+
             <li>
-              <div class="inner">
-                <a href="https://www.microsoft.com/" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/microsoft.svg" alt="Microsoft's logotype">
-                  </div>
-                  <p>Microsoft</p>
-                </a>
+              <div>
+                <p>Alternativa resor</p>
+                <p class="info">I dag presenteras resor utifrån tidtabellen och de snabbaste resorna presenteras först. Om den snabbaste resan är fullbokad visas inga alternativa lösningar för resenären. När man bokar nattåg presenteras alternativ med byte på natten då det ger kortare restid, men att sova 8 timmar på samma tåg och komma fram lite senare kan ju vara mycket bättre. Hur skulle man kunna presentera olika alternativ på ett bra sätt? </p>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <p>Störningshantering</p>
+                <p class="info">I situationer när trafiken inte fungerar som den ska kan olika bussar, tåg och taxi ta hand om resenärerna. Ofta finns det ingen översikt över var olika fordon befinner sig eller något enkelt sätt att kontakta dem. Kan man ge förarna tillgång till en app- webb- eller SMSlösning som gör det lättare att hålla koll på informationen?</p>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <p>Rese- och tåginformation</p>
+                <p class="info">Idag kan det vara svårt att vet var på perrongen man ska stå när tåget kommer och veta när tåget kommer. Var exakt stannar vagnen? Hur många meter bort är tåget? Hur kan GPS-information från tågen användas för att ge resenärerna noggrannare reseinformation? Brukar tåget vara sent? Hur presenterar man historisk förseningsstatistik för en viss sträcka eller avgång för att en som kund ska kunna minska risken för förseningar?</p>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <p>Tågföretags verksamhet</p>
+                <p class="info">Vi är nyfikna på lösningar som gör att biljettkontrollen kan hanteras av resenärerna själva. Automatisk ombokning vid trafikstörning, automatisk återbetalning vid försening, översikt över bokade platser med mera. Biljettlöst resande – resa med valfritt RFID kort, Aztek, QR, SMS, MMS, Streckkod, Körkort, ID kort, Pass, och så vidare. Självanmälda felaktigheter i vagnar så som städning eller trasiga detaljer. Hur skulle det funka att boka resor inne i onlinekalendrar eller på Facebook?</p>
               </div>
             </li>
           </ul>
-        </article>
-        <hr>
-        <article class="brands">
-          <h2>Sponsorer</h2>
-          <ul class="brand-list">
-            <li>
-              <div class="inner">
-                <a href="https://www.icomera.com/" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/icomera.png" alt="Icomera's logotype">
-                  </div>
-                  <p>Icomera</p>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div class="inner">
-                <a href="https://www.m.nu" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/mnu.png" alt="m.nu's logotype">
-                  </div>
-                  <p>m.nu Hemautomation</p>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div class="inner">
-                <a href="https://www.vasttrafik.se/" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/vasttrafik.svg" alt="Västtrafiks's logotype">
-                  </div>
-                  <p>Västtrafik</p>
-                </a>
-              </div>
-            </li>
-            <!--<li>
-              <div class="inner">
-                <a href="http://www.blataget.com/" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/blåtåget.png" alt="BlåTåget's logotype">
-                  </div>
-                  <p>Blå Tåget</p>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div class="inner">
-                <a href="http://www.linkon.se/" target="_blank">
-                  <div class="logo">
-                    <img src="media/brands/linkon.png" alt="Linkon's logotype">
-                  </div>
-                  <p>Linkon</p>
-                </a>
-              </div>
-            </li>-->
-          </ul>
-        </article>
+        </div>
+      </article>
 
+      <hr>
+
+      <article class="adaptive">
+        <div class="wrapper">
+          <div class="article-head">
+            <h2>Kollektivtrafik API:er och öppna data</h2>
+            <p>Det finns en massa bra resurser att tillgå som gör utvecklingen möjlig. Här är en lista på API:er som kollektivtrafiksföretagen tillhandahåller.</p>
+          </div>
+          <ul class="links ext">
+            <li>
+              <a href="http://www.trafiklab.se" target="_blank">
+                <p>Trafiklab</p>
+                <p class="desc">Kollektivtrafik API:er och data</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://lastkajen.trafikverket.se" target="_blank">
+                <p>Trafikverket</p>
+                <p class="desc">Kartor m.m.</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://developer.vasttrafik.se/portal" target="_blank">
+                <p>Västtrafik</p>
+                <p class="desc">Västtrafiks utvecklarportal</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="http://labs.skanetrafiken.se" target="_blank">
+                <p>Skånetrafiken</p>
+                <p class="desc">Skånetrafikens utvecklarportal</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.46elks.com" target="_blank">
+                <p>46elks</p>
+                <p class="desc">SMS, Samtal och MMS API</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://api.taxistockholm.se/doc/" target="_blank">
+                <p>Taxi Stockholm</p>
+                <p class="desc">Boknings API</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://oppnadata.se" target="_blank">
+                <p>Öppnadata</p>
+                <p class="desc">Samlingsplats för öppen data</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="http://hackforsweden.se/sv/data" target="_blank">
+                <p>HackForSweden</p>
+                <p class="desc">Lista med öppen data</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="http://api.sr.se" target="_blank">
+                <p>Sveriges radio</p>
+                <p class="desc">API med bilder, pods, m.m.</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="http://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=7369889&fileOId=7369895" target="_blank">
+                <p>Night Train</p>
+                <p class="desc">Mastersuppsats om nattåg</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <hr>
+
+      <div class="padding-container">
+        <div class="wrapper">
+
+          <article class="brands">
+            <h2>Arrangörer</h2>
+            <ul class="brand-list">
+              <li>
+                <div class="inner">
+                  <a href="https://www.46elks.com/" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/46elks.png" alt="46elk's logotype">
+                    </div>
+                    <p>46elks</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="inner">
+                  <a href="https://www.sj.se/" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/sj.png" alt="SJ AB's logotype">
+                    </div>
+                    <p>SJ AB</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="inner">
+                  <a href="https://www.etraveli.com/" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/etraveli.png" alt="eTRAVELi's logotype">
+                    </div>
+                    <p>eTRAVELi</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="inner">
+                  <a href="https://www.trafiklab.se/" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/trafiklab.png" alt="Trafiklab's logotype">
+                    </div>
+                    <p>Trafiklab</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="inner">
+                  <a href="https://www.oxyfi.se/" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/oxify.png" alt="Oxyfi's logotype">
+                    </div>
+                    <p>Oxyfi</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="inner">
+                  <a href="https://www.railit.se/" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/railit.png" alt="Railit's logotype">
+                    </div>
+                    <p>Railit Tracker AB</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="inner">
+                  <a href="https://www.microsoft.com/" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/microsoft.svg" alt="Microsoft's logotype">
+                    </div>
+                    <p>Microsoft</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="inner">
+                  <a href="https://www.sandelinwebbyra.se/" target="_blank">
+                    <div class="logo wide">
+                      <img src="media/brands/sandelinwebbyra.png" alt="Sandelim Webbyrå's logotype">
+                    </div>
+                    <p>Sandelin Webbyrå</p>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <hr>
+
+          <article class="brands">
+            <h2>Sponsorer</h2>
+            <ul class="brand-list">
+              <li>
+                <div class="inner">
+                  <a href="https://www.icomera.com/" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/icomera.png" alt="Icomera's logotype">
+                    </div>
+                    <p>Icomera</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="inner">
+                  <a href="https://www.m.nu" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/mnu.png" alt="m.nu's logotype">
+                    </div>
+                    <p>m.nu Hemautomation</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="inner">
+                  <a href="https://www.vasttrafik.se/" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/vasttrafik.svg" alt="Västtrafiks's logotype">
+                    </div>
+                    <p>Västtrafik</p>
+                  </a>
+                </div>
+              </li>
+              <!--
+              <li>
+                <div class="inner">
+                  <a href="http://www.blataget.com/" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/blåtåget.png" alt="BlåTåget's logotype">
+                    </div>
+                    <p>Blå Tåget</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="inner">
+                  <a href="http://www.linkon.se/" target="_blank">
+                    <div class="logo">
+                      <img src="media/brands/linkon.png" alt="Linkon's logotype">
+                    </div>
+                    <p>Linkon</p>
+                  </a>
+                </div>
+              </li>
+              -->
+            </ul>
+          </article>
+
+        </div>
       </div>
     </section>
 
