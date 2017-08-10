@@ -183,6 +183,10 @@ subjectOverlay.querySelector('.close').addEventListener('click', () => {
   toggleSubjectOverlay();
 });
 
+subjectOverlay.querySelector('.subject-info').addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+
 function subjectClick () {
   const title = this.querySelector('p').innerHTML;
   const text = this.querySelector('p.info').innerHTML;
@@ -207,6 +211,7 @@ function toggleSubjectOverlay () {
         const offset = elemRect.top - bodyRect.top - 50;
         window.scrollTo(0, offset);
       }
+      window.addEventListener('click', toggleSubjectOverlay);
 
       setTimeout(() => {
         subjectOverlayMoving = false;
@@ -214,6 +219,7 @@ function toggleSubjectOverlay () {
     }, 20);
   } else {
     subjectOverlay.classList.remove('show');
+    window.removeEventListener('click', toggleSubjectOverlay);
     setTimeout(() => {
       subjectOverlay.classList.remove('display');
       setTimeout(() => {
