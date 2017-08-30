@@ -32,4 +32,5 @@ gulp.task('watch', () => {
   gulp.watch('src/js/main.js', ['js']);
 });
 
+gulp.task('build', [ 'scss', 'js' ]);
 gulp.task('default', [ 'scss', 'js', 'watch' ]);
