@@ -1,5 +1,6 @@
 # Project ignores
 /node_modules
+/package-lock.json
 
 # macOS ignores
 *.DS_Store
