@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/style.css?ver=1">
 
     <script src="js/swiper.min.js"></script>
+    <script src="ol/ol.js"></script>
+
   </head>
   <body>
 
@@ -32,7 +34,7 @@
           <h1>Hackathon on rails!</h1>
           <h2 style="margin-top:40px;">7<span>:e</span> till 9<span>:e</span> September</h2>
           <p>Följ med på en tågresa genom 2000km av Sveriges vackra landskap tillsammans med 47 andra hackare och förändra kollektivtrafiken till det bättre.</p>
-          <p style="font-weight: bold; color: gold;">Biljetterna för Trainhack 2017 är slutsålda, prenumerera på vårt nyhetsbrev så mailar vi dig om någon plats skulle bli ledig.</p>
+          <!--<p style="font-weight: bold; color: gold;">Biljetterna för Trainhack 2017 är slutsålda, prenumerera på vårt nyhetsbrev så mailar vi dig om någon plats skulle bli ledig.</p>-->!
           <div class="button-wrapper">
             <button class="lined white" id="watch-video">Se filmen</button>
             <button id="sign-up">Nyhetsbrev</button>
@@ -93,6 +95,20 @@
                 </a>
               </div>
             </div>
+          </article>
+
+          <hr>
+
+          <article>
+
+          <div class="article-head">
+            <h2>Här är vi</h2>
+            <p>
+            <div id="map" style="width:480px;height:320px;border-radius:15px;overflow:hidden;"></div>
+            <h2 id="traininfo">154 km/h<h2>
+            </p>
+          </div>
+
           </article>
 
           <hr>
@@ -649,5 +665,78 @@
     </section>
 
     <script src="js/main.js"></script>
+    <script>
+      var url="tiles/{z}/{x}/{y}.png";
+      var follow = '';
+      var position = {};
+      var list = {};
+      var poslayer = new ol.source.Vector({});
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM({url : url})
+          }),
+          new ol.layer.Vector({
+          source: poslayer
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([16.2, 62.3]),
+          zoom: 5,
+          minZoom: 5,
+          maxZoom: 14
+        })
+      });
+
+var style = new ol.style.Style({
+    image: new ol.style.Circle({
+        fill: new ol.style.Fill({
+            color: 'rgba(255, 255, 255, 0.7)'
+        }),
+        stroke: new ol.style.Stroke({
+            width: 1,
+            color: 'rgba(0, 0, 0, 1)'
+        }),
+        radius: 7
+    })
+});
+
+
+var point = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.transform([0,0], 'EPSG:4326', 'EPSG:3857')),
+        name: 'Tåg'
+    });
+
+point.setStyle(style);
+poslayer.addFeature(point);
+
+function gotData(data){
+    var speed = Math.round(parseFloat(data['speed'])*360) / 100.0;
+    var pos = [parseFloat(data['longitude']), parseFloat(data['latitude'])];
+
+    point.setGeometry(new ol.geom.Point(ol.proj.transform(pos, 'EPSG:4326', 'EPSG:3857')));
+    document.getElementById('traininfo').innerHTML = speed + " km/h";
+    setMapCenter(pos);
+}
+
+function setMapCenter(pos){
+        map.getView().setCenter(ol.proj.transform(pos, 'EPSG:4326', 'EPSG:3857'));
+    }
+
+function rungetpos(){
+try{var element = document.getElementById("oldid");
+element.parentNode.removeChild(element);}
+catch(e){}
+var script = document.createElement('script');
+script.src = 'http://www.ombord.info/api/jsonp/position/?callback=gotData'
+script.id = "oldid";
+//document.getElementsByTagName('head')[0].appendChild(script);
+
+setTimeout(rungetpos, 2000);
+}
+
+setTimeout(rungetpos, 2000);
+    </script>
   </body>
 </html>
